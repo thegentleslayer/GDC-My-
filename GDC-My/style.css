@@ -1,0 +1,208 @@
+body {
+    font-family: 'Roboto Flex', sans-serif;
+    background-color: #25142D;
+}
+
+h1, p {
+    font-family: 'Roboto Flex', sans-serif;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Pour centrer le texte horizontalement */
+    margin-top: 20px; /* Ajustez la marge supérieure selon vos besoins */
+    height: 300px; /* Ajustez la hauteur selon vos besoins */
+    color: white;
+    background-color: #25142D;
+    
+}
+
+
+
+
+#header header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #25142D;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+#header nav {
+    margin-left: 50px;
+    align-items: center;
+}
+
+#test2 {
+    align-items: right;
+    justify-content: right;
+}
+
+#header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+#header nav ul li:last-child {
+    margin-right: 0;
+    margin-right: auto;
+}
+
+#header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-top: 70px;
+    overflow: hidden; /* assurez-vous que le texte ne dépasse pas l'image */
+}
+
+.img-overlay {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    text-align: center;
+    z-index: 2;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: auto;
+    max-width: 90%;
+    border: 1px solid transparent;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease; /* Ajoute une transition pour l'opacité */
+    animation: fadeInOut 2s infinite alternate; /* Animation pour ajouter de la dynamique */
+}
+
+#navigation:hover .img-overlay {
+    opacity: 1;
+    pointer-events: auto; /* Permet aux événements de pointer de passer à l'élément au survol */
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.img-overlay:hover {
+    border-color: white;
+}
+
+.img-overlay.hovered {
+    transform: translateX(-50%) translateY(-5px); /* Déplace légèrement vers le haut */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Ajoute une ombre */
+}
+
+
+
+.img-overlay p {
+    font-size: 18px; /* taille du texte */
+    font-weight: bold; /* poids de la police du texte */
+}
+
+#navigation img{
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+}
+
+#navigation h1{
+    text-align: center;
+}
+
+footer {
+    background-color: #25142D;
+    color: #fff;
+    padding: 20px 0;
+    margin-top: 500px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto; 
+    display: flex;
+    justify-content: space-between; /* Centrer horizontalement */
+    align-items: center; /* Centrer verticalement */
+    flex-wrap: wrap; /* Permettre le passage à la ligne */
+    padding: 10px 20px;
+}
+
+.legal {
+    flex-basis: auto; /* Prend autant de largeur que nécessaire */
+    margin-left: 20px; /* Marge à droite */
+}
+
+.copy-right li{
+    margin-bottom: 5px;
+    
+}
+
+.social-media {
+    margin-right: 0px; /* Mettre à droite */
+}
+
+.footer-content h4 {    
+    margin-top: 0; /* Supprime la marge supérieure des titres */
+}
+
+.footer-content ul {
+    padding-left: 0; /* Supprime le décalage à gauche de la liste */
+    margin-bottom: 10px; /* Ajoute un espace entre les listes */
+}
+
+.footer-content li {
+    margin-bottom: 5px; /* Espacement entre les éléments de la liste */
+}
+
+.footer-content a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-content a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; /* Afficher les éléments en colonne sur les petits écrans */
+        align-items: center; /* Centrer verticalement sur les petits écrans */
+    }
+
+    .legal, .copy-right, .social-media {
+        margin: 10px 0; /* Ajouter de la marge en haut et en bas */
+    }
+
+    .social-media {
+        margin-left: 0; /* Supprimer la marge à gauche */
+        margin-top: auto; /* Mettre en bas */
+    }
+}
